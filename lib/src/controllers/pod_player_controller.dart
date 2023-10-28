@@ -61,6 +61,10 @@ class PodPlayerController {
     await _checkAndWaitTillInitialized();
   }
 
+  Widget getDefaultVideoOverlays() {
+    return DefaultVideoOverlays(tag: getTag);
+  }
+
   Future<void> _checkAndWaitTillInitialized() async {
     if (_ctr.controllerInitialized) {
       _isCtrInitialised = true;
